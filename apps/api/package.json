@@ -1,5 +1,5 @@
 {
-  "name": "api",
+  "name": "@monorepo/api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,6 +11,13 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "@monorepo/shared": "workspace:*"
+    "@monorepo/shared": "workspace:*",
+    "drizzle-orm": "^0.45.4",
+    "pg": "^8.23.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.23.1",
+    "drizzle-kit": "^0.31.11"
   }
 }
