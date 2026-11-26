@@ -176,3 +176,23 @@ export const orderItemsRelations = relations(orderItems, ({ one }) => ({
     references: [productVariants.id],
   }),
 }));
+
+// --- Types d'inférence Drizzle ---
+
+export type User = typeof users.$inferSelect;
+export type NewUser = typeof users.$inferInsert;
+
+export type Category = typeof categories.$inferSelect;
+export type NewCategory = typeof categories.$inferInsert;
+
+export type Product = typeof products.$inferSelect;
+export type NewProduct = typeof products.$inferInsert;
+
+export type ProductVariant = typeof productVariants.$inferSelect;
+export type NewProductVariant = typeof productVariants.$inferInsert;
+
+export type OrderRow = typeof orders.$inferSelect;
+export type NewOrder = typeof orders.$inferInsert;
+
+export type OrderItemRow = typeof orderItems.$inferSelect;
+export type NewOrderItem = typeof orderItems.$inferInsert;
